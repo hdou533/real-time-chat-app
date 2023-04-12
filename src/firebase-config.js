@@ -2,17 +2,18 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from 'firebase/auth'
 import { getFirestore } from '@firebase/firestore'
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAr3UGO1770vpUKAXYRkVp9yVog8VHTTyQ",
-  authDomain: "real-time-chat-573fc.firebaseapp.com",
-  projectId: "real-time-chat-573fc",
-  storageBucket: "real-time-chat-573fc.appspot.com",
-  messagingSenderId: "221089100154",
-  appId: "1:221089100154:web:a95891df7d593f0ed066c3"
+  apiKey: process.env.API_KEY,
+  authDomain: process.env.AUTH_DOMAIN,
+  projectId: process.env.PROJECT_ID,
+  storageBucket: process.env.STORAGE_BUCKET,
+  messagingSenderId: process.env.MESSAGING_SENDER_ID,
+  appId: process.env.APP_ID
 };
 
 // Initialize Firebase
